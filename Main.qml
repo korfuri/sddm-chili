@@ -56,6 +56,22 @@ Rectangle {
         LayoutMirroring.childrenInherit: true
 
         RowLayout {
+            id: footer
+
+            Layout.fillHeight: false
+            Layout.alignment: Qt.AlignTop
+            Layout.bottomMargin: generalFontSize
+            Layout.leftMargin: generalFontSize * 1.5
+
+            SessionMenu {
+                id: sessionMenu
+
+                rootFontSize: root.generalFontSize
+                rootFontColor: root.generalFontColor
+            }
+        }
+
+	RowLayout {
             id: header
 
             Layout.alignment: Qt.AlignRight
@@ -282,22 +298,6 @@ Rectangle {
                     }
                 }
             ]
-        }
-
-        RowLayout {
-            id: footer
-
-            Layout.fillHeight: false
-            Layout.alignment: Qt.AlignBottom
-            Layout.bottomMargin: generalFontSize
-            Layout.leftMargin: generalFontSize * 1.5
-
-            SessionMenu {
-                id: sessionMenu
-
-                rootFontSize: root.generalFontSize
-                rootFontColor: root.generalFontColor
-            }
         }
 
         Connections {
